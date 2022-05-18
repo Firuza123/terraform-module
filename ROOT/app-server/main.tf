@@ -8,5 +8,5 @@ module "app-vpc" {
 
 module "app-server" {
   source = "git::https://github.com/Firuza123/terraform-module.git//CHILD/EC2"
-  #source = "git@github.com/Firuza123/terraform-module//CHILD/EC2"
+  subnet_id = module.app-vpc.private_subnet_id
 }
